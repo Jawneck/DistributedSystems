@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/XMLSchema"
+	xmlns:tns="http://www.example.org/XMLSchema"
+	elementFormDefault="qualified">
+
+	<element name="Booking">
+		<complexType>
+			<sequence>
+				<element name="BookingID" type="int"></element>
+				<element name="CustomerID" type="int"></element>
+				<element name="CarID" type="int"></element>
+				<element name="PickupDate" type="date"></element>
+				<element name="DropoffDate" type="date"></element>
+				<element name="Customer" type="tns:Customer"></element>
+				<element name="Vehicle" type="tns:Vehicle"></element>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="Customer">
+		<sequence>
+			<element name="CustomerID" type="int"></element>
+			<element name="FirstName" type="string"></element>
+			<element name="LastName" type="string"></element>
+			<element name="Town" type="string"></element>
+			<element name="LicenceNum" type="int"></element>
+		</sequence>
+	</complexType>
+	<complexType name="Vehicle">
+		<sequence>
+			<element name="CarID" type="int"></element>
+			<element name="RegNumber" type="string"></element>
+			<element name="Model" type="string"></element>
+			<element name="Year" type="int"></element>
+			<element name="DepotCode" type="int"></element>
+		</sequence>
+	</complexType>
+</schema>	
